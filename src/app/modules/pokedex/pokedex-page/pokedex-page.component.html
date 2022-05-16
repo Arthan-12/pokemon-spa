@@ -1,0 +1,23 @@
+<app-search-pokemon
+  (searchTriggered)="setSearchTriggered($event)"
+></app-search-pokemon>
+
+<div class="pokedex">
+  <div class="pokemon-display">
+    <div class="info" *ngIf="!loadingStatus">
+      <app-pokemon-info></app-pokemon-info>
+    </div>
+    <div class="img" *ngIf="!loadingStatus">
+      <app-pokemon-display
+        (notFoundPokemon)="setNotFoundDisplay($event)"
+      ></app-pokemon-display>
+    </div>
+    <div class="not-found" *ngIf="!loadingStatus && notFoundPokemon">
+      <app-psyduck-icon></app-psyduck-icon>
+    </div>
+    <div *ngIf="loadingStatus" class="loader">
+      <app-pokeball-loader size="medium"></app-pokeball-loader>
+    </div>
+  </div>
+  <app-pokedex-background></app-pokedex-background>
+</div>

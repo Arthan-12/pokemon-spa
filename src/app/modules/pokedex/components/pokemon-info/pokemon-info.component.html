@@ -1,0 +1,21 @@
+<section>
+  <div *ngIf="pokemon.id" class="pokemon-info">
+    <div class="info pokemon-name">
+      <label>name:</label><label>{{ pokemon.name }}</label>
+    </div>
+    <div class="info pokemon-height">
+      <label>height:</label><label>{{ pokemon.height }}</label>
+    </div>
+    <div class="info pokemon-weight">
+      <label>weight:</label><label>{{ pokemon.weight }}</label>
+    </div>
+    <div class="info pokemon-types">
+      <label>types:</label>
+      <div class="list-container">
+        <label class="type" *ngFor="let type of pokemon.types">
+          {{ type.type.name }}
+        </label>
+      </div>
+    </div>
+  </div>
+</section>

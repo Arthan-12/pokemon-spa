@@ -1,0 +1,11 @@
+<div>
+  <form (ngSubmit)="searchPokemon()" class="search-pokemon-form">
+    <label>Digite o nome de um Pokémon</label>
+    <input [formControl]="searchPokemonInput" />
+    <button type="submit" class="search-button">
+      <label class="button-title">{{ buttonTitle }}</label>
+      <app-pokeball-icon></app-pokeball-icon>
+    </button>
+    <span *ngIf="searchPokemonInput.errors">{{ errorMessage }}</span>
+  </form>
+</div>

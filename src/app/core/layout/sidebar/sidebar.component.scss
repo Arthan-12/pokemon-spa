@@ -1,0 +1,12 @@
+@import 'src/global_variables.scss';
+
+.container {
+  width: 120px;
+  height: 100vh;
+  background-color: $cultured;
+
+  .list-item {
+    margin: 0;
+    cursor: pointer;
+  }
+}

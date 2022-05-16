@@ -1,0 +1,39 @@
+@import 'src/global_variables.scss';
+
+.pokeball-loader {
+  #pokeball {
+    animation-name: spin;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    .cls-1 {
+      fill: $pokeball-black;
+    }
+    .cls-2 {
+      fill: $pokeball-white;
+    }
+    .cls-3 {
+      fill: $pokeball-red;
+    }
+
+    &.small {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.medium {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
